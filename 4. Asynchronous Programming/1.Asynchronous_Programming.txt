@@ -1,0 +1,38 @@
+// Asynchonous Programming
+
+
+
+//Asynchronous
+//Much better and faster way
+// loadPostAsymc(function(){
+//     ... wait til posts are fetched
+//     ... do something with posts
+// })
+// doTheNextThing(); // Doesnt have to wait until posts laod
+
+
+//Synchronous
+//Callbacks
+//Slower
+// posts = loadPostSync();
+// ... wait til posts are fetched
+// ... do something with posts
+// doTheNextThing(); // Has to wait until posts load
+
+
+//Other Methods: Promises, Async/Await
+
+
+// AJAX (Asynchromous JavaScript and XML)
+
+//Make async requests in the background
+// No page reload/refresh
+// Fetch Data
+// Very interactive
+
+// Libraries And Other Methods
+// Fetch API
+// Axios
+// Superagent
+// jQuery
+// Node HTTP

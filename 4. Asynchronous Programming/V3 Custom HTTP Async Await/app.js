@@ -1,0 +1,42 @@
+/**
+ *   EasyHTTP Library
+ *   Library for making HTTP Request
+ *
+ * @version 3.0.0
+ * @author Carlo Rosco
+ * @license MIT
+ *
+ **/
+
+const http = new EasyHTTP();
+
+// Get Users
+// http
+//   .get("https://jsonplaceholder.typicode.com/users")
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+// // Users Data
+const data = {
+  name: "Carlo Rosco",
+  username: "jcarlorosco",
+  email: "carlorosco@google.com"
+};
+
+// //Create User
+// http
+//   .post("https://jsonplaceholder.typicode.com/users", data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+// Update User
+// http
+//   .put("https://jsonplaceholder.typicode.com/users/2", data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+//Delete User
+http
+  .delete("https://jsonplaceholder.typicode.com/users/2")
+  .then(data => console.log(data))
+  .catch(err => console.log(err));

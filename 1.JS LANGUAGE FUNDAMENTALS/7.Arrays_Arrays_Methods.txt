@@ -1,0 +1,71 @@
+//Arrays
+//Arrays store multiple values in a single variable.
+
+//Create some arrays
+const nums = [43, 56, 33, 23, 44, 36, 5];
+const nums2 = new Array(22, 45, 55, 66, 77);
+const fruit = ["Apple", "Banana", "Orange", "Pear"];
+//Arrays can have multiple data types.
+const mixed = ["Hello", 22, true, undefined, null, { a: 1, b: 1 }, new Date()];
+
+let val;
+
+// Get Array length
+val = nums.length;
+// Check if it is array
+val = Array.isArray(nums);
+// Get a single value from an array
+//Starts from pos 0/arrays are zero based.
+val = nums[3];
+val = nums[0];
+//Insert to array
+nums[2] = 100;
+//Find index of value
+val = nums.indexOf(36);
+
+//MUTATING ARRAYS
+//Add on to the end
+// nums.push(250);
+
+// //Add on to front
+// nums.unshift(120);
+
+// // Take off from end
+// nums.pop();
+
+// // Take off from front
+// nums.shift();
+
+// // Splice values
+// //(1, 1) start and end
+// nums.splice(1, 3);
+
+// //Reverse the array
+// nums.reverse();
+
+//CONCATENATE ARRAYS
+val = nums.concat(nums2);
+
+// Sorting Arrays
+// val = fruit.sort();
+// val = nums.sort();
+
+// //Use the "Compare function" (Lowest to highest)
+// val = nums.sort(function(x, y) {
+//   return x - y;
+// });
+
+// // Reverse Sort (Highest to lowest)
+// val = nums.sort(function(x, y) {
+//   return y - x;
+// });
+
+//Find
+//First numbber that meet the condition will be the output.
+function over50(num) {
+  return num > 50;
+}
+val = nums.find(over50);
+
+console.log(nums);
+console.log(val);

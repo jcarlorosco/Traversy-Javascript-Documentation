@@ -1,0 +1,47 @@
+// Type Conversion
+let val;
+
+// Number to String
+val = String(5);
+val = String(4 + 4);
+//Bool to String
+val = String(true);
+// Date to String
+val = String(new Date());
+// Array to String
+val = String([1, 2, 3, 4]);
+
+//toString() method
+val = (5).toString();
+val = true.toString();
+
+//String to numbers
+val = Number("2");
+val = Number(true);
+val = Number(false);
+val = Number(null);
+val = Number("Hello");
+val = Number([1, 2, 3]);
+//If you try to parse a String or an Array to a number it will return as NaN (Not a Number).
+
+//parseInt() method
+val = parseInt("100.389"); // Interger
+val = parseFloat("100.389"); //Float
+
+// Output
+console.log(val);
+console.log(typeof val);
+//length only works in strings
+// console.log(val.length);
+
+//Only works in Numbers display () decimal numbers.
+console.log(val.toFixed());
+
+//Type Coercion
+//If one is a string then it will just put the other integer with the string.
+const val1 = "5";
+const val2 = 6;
+const sum = parseInt(val1) + val2;
+
+console.log(sum);
+console.log(typeof sum);

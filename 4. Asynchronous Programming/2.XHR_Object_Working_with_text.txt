@@ -1,0 +1,60 @@
+//XHR OBJECT METHODS WORKING WITH TEXT
+
+document.getElementById("button").addEventListener("click", loadData);
+
+function loadData() {
+  // Create an XHR Object
+  const xhr = new XMLHttpRequest();
+
+  // OPEN (specifies what we wanna make)
+  // GET request read the data = data.text true if it is async.
+  xhr.open("GET", "data.txt", true);
+
+  //   console.log("READYSTATE", xhr.readyState);
+
+  //Optional - Used for spinners/loaders
+  xhr.onprogress = function() {
+    console.log("READYSTATE", xhr.readyState);
+  };
+
+  //we dont need to check the ready state here. (Newer syntax and recommend to use.)
+  xhr.onload = function() {
+    console.log("READYSTATE", xhr.readyState);
+    //check if its is 200
+    if (this.status === 200) {
+      //console log the data.text
+      //   console.log(this.responseText);
+      //If we want to display something in the page without reloading the page
+      document.getElementById(
+        "output"
+      ).innerHTML = `<h1>${this.responseText}</h1>`;
+    }
+  };
+
+  //Old way whic requires you to check the status and ready state.
+  //   xhr.onreadystatechange = function() {
+  //     console.log("READYSTATE", xhr.readyState);
+  //     if (this.status === 200 && this.readyState === 4) {
+  //       console.log(this.responseText);
+  //     }
+  //   };
+
+  //Only displays when something went wrong
+  xhr.onerror = function() {
+    console.log("Request Error");
+  };
+
+  xhr.send();
+
+  //Ready State Values
+  // 0: Request not initialized
+  // 1: server connection established (xhr.open)
+  // 2: Request Received
+  // 3: Processing Request (xhr.onprogress)
+  // 4: Request finished and response is ready (xhr.onload)
+
+  //HTTP Statuses
+  // 200: 'OK'
+  // 403: 'Forbidden'
+  // 404: 'Not Found'
+}

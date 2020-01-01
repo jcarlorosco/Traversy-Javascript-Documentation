@@ -1,0 +1,92 @@
+//General Loops
+
+// FOR LOOP
+//Use when you know how many times it will run or iterations you have. (Commonly use/ Personal Preference)
+//In for loop we set the variable inside the loop.
+
+// for (let i = 0; i < 10; i++) {
+//  c console.log("Number " + i);
+// }
+// Output: Number 0 - 9 (i++ = (i = i + 1))
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 2) {
+//     console.log("2 is my favorite number");
+//     continue;
+//     // continue; will remove the 2 because of i === 2 and it will continue to loop.
+//     // without continue it will just display the i = 2.
+//   }
+//   if (i === 5) {
+//     console.log("Loop has stopped");
+//     break;
+//     // Breaks the loop if it meets the condition.
+//   }
+//   console.log("Number " + i);
+// }
+
+//WHILE LOOP
+//Use when you dont know how many times it will run or iterations you have. (Personal Preference)
+// In while loop we set the variable outside the loop
+
+// let i = 0;
+// //Only the condisition is inside the loop or function.
+// while (i < 10) {
+//   console.log("Number " + i);
+//   i++;
+// }
+
+//DO WHILE LOOP
+//In do while everything in the loop will run even the condition didnt met.
+
+//We set i = 100
+
+// let i = 100;
+// do {
+//   console.log("Number " + i);
+//   i++;
+// } while (i < 10);
+
+//Output will be Number + i = "Number 100"
+//It will still run even we didn't met i < 10.
+
+//LOOP THROUGH ARRAY
+//Use for loops in an array to get its values.
+const cars = ["Ford", "Chevy", "Honda", "Toyota"];
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
+
+//FOREACH
+//Self-calling function/Anonymous function
+//Much cleaner and shorter way to use loops in an array to get its value.
+
+//( 1st(iterator), 2nd(index), 3rd(Array))
+// cars.forEach(function(car, index, array) {
+//   console.log(`${index} : ${car}`);
+//   console.log(array)
+// });
+
+// MAP
+// const users = [
+//   { id: 1, name: "John" },
+//   { id: 2, name: "Sarah" },
+//   { id: 3, name: "Karen" },
+//   { id: 4, name: "Steve" }
+// ];
+// const ids = users.map(function(user) {
+//   return user.id;
+// });
+// console.log(ids);
+
+//FOR IN LOOP
+//Often use in objects
+// Inside of an object we have a key(left) and a value(right).
+const user = {
+  firtName: "Carlo",
+  lastName: "Rosco",
+  age: 23
+};
+for (let x in user) {
+  //to get the key and the value of an object.
+  console.log(`${x} : ${user[x]}`);
+}

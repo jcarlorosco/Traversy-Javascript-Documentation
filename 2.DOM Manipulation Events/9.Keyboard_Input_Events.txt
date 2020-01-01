@@ -1,0 +1,43 @@
+// Keyboard Input Events
+const form = document.querySelector("form");
+const taskInput = document.getElementById("task");
+const heading = document.querySelector("h5");
+//Works with jquery
+const select = document.querySelector("select");
+//Clear input
+taskInput.value = "";
+
+// form.addEventListener("submit", runEvent);
+
+//Keydown
+// taskInput.addEventListener("keydown", runEvent);
+//Keyup (after releasing the typing/holding key)
+// taskInput.addEventListener("keyup", runEvent);
+//Keypress (Generalize)
+// taskInput.addEventListener("keypress", runEvent);
+//Focus (When you clicked on the text area)
+// taskInput.addEventListener("focus", runEvent);
+//Blur (When you clicked outside the text area)
+// taskInput.addEventListener("blur", runEvent);
+//Cut (When you cut a text inside text area)
+// taskInput.addEventListener("cut", runEvent);
+//Paste (Paste something inside the text area)
+// taskInput.addEventListener("paste", runEvent);
+// Input (Anything you do inside the text area)
+// taskInput.addEventListener("input", runEvent);
+// Change event (Select)
+//select.addEventListener('Change' runEvent);
+
+function runEvent(e) {
+  console.log(`EVENT TYPE: ${e.type}`);
+
+  //   console.log(e.target.value);
+
+  // Bind heading to target.value which is our h5. So everything we input is h5 text value.
+  //   heading.innerText = e.target.value;
+
+  //Get input value
+  //   console.log(taskInput.value);
+
+  //   e.preventDefault();
+}

@@ -1,0 +1,91 @@
+// Comparison Operators If statements
+
+// if(something){
+//     do something
+// } else {
+//     do something
+// }
+
+//Asigning 100 to id (=)
+const id = 100;
+
+// EQUAL TO
+// Comparing 100 to id (==)
+// if (id == 100) {
+//   console.log("CORRECT!");
+// } else {
+//   console.log("INCORRECT!");
+// }
+
+// //NOT EQUAL TO
+// if (id != 101) {
+//   console.log("CORRECT!");
+// } else {
+//   console.log("INCORRECT!");
+// }
+
+// // EQUAL TO VALUE AND TYPE
+// if (id === 100) {
+//   console.log("CORRECT!");
+// } else {
+//   console.log("INCORRECT!");
+// }
+
+// //NOT EQUAL TO VALUE AND TYPE
+// if (id !== 100) {
+//   console.log("CORRECT!");
+// } else {
+//   console.log("INCORRECT!");
+// }
+
+// //Test if ID is undefined
+// if (typeof id !== "undefined") {
+//   console.log(`The ID is ${id}`);
+// } else {
+//   console.log("No ID");
+// }
+
+// Greater or Less than
+// if (id >= 200) {
+//   console.log("CORRECT!");
+// } else {
+//   console.log("INCORRECT!");
+// }
+
+//IF ELSE
+const color = "blue";
+
+// if (color === "red") {
+//   console.log("Color is Red");
+// } else if (color === "blue") {
+//   console.log("Color is Blue");
+// } else {
+//   console.log("Color Undefined");
+// }
+
+// LOGICAL OPERATORS
+const name = "Carlo";
+const age = 24;
+
+// AND $$
+if (age > 0 && age < 12) {
+  console.log(`${name} is a child`);
+} else if (age >= 13 && age <= 19) {
+  console.log(`${name} is a teenager`);
+} else {
+  console.log(`${name} is an adult`);
+}
+
+// OR ||
+if (age < 16 || age > 65) {
+  console.log(`${name} cannot run in race`);
+} else {
+  console.log(`${name} is registered for the race`);
+}
+
+// TERNARY OPERATOR (Short hand ways to do conditionals)
+console.log(id === 100 ? "CORRECT" : "INCORRECT");
+
+// WITHOUT BRACES
+if (id === 100) console.log("CORRECT");
+else console.log("INCORRECT");

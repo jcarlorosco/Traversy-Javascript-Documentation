@@ -1,0 +1,62 @@
+//Traversing the DOM
+let val;
+
+const list = document.querySelector("ul.collection");
+const listItem = document.querySelector("li.collection-item:first-child");
+
+val = listItem;
+val = list;
+
+//Different Properties that is attach into this nodes
+//Get Child nodes
+// returns node list / All different kinds of nodes
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[0].nodeType;
+val = list.childNodes[3].nodeType;
+// Output :
+// 1 - Element
+// 2 - Attribute (deprecated)
+// 3 - Text Node
+// 8 - Comment
+// 9 - Document itself
+// 10 - Doctype
+
+//Get Children element nodes
+//returns HTML collection / Just the element
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = "Hello";
+
+//Children of Children
+list.children[3].children[0].id = "test-link";
+val = list.children[3].children[0];
+
+//first child/first element child
+val = list.firstChild;
+val = list.firstElementChild;
+
+//last child/last element child
+val = list.lastChild;
+val = list.lastElementChild;
+
+// Count child elements
+val = list.childElementCount;
+
+// Get parent node
+val = listItem.parentNode;
+val = listItem.parentElement;
+
+//Get the parent element of parent element
+val = listItem.parentElement.parentElement;
+
+// Get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+// Get previous sibling
+val = listItem.previousSibling;
+val = listItem.previoustElementSibling;
+
+console.log(val);

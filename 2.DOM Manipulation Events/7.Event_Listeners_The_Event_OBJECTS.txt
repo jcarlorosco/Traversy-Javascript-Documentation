@@ -1,0 +1,40 @@
+//EVENT LISTENERS
+
+// addEventListener consist of (event,anonymous function) (e is an event object)
+//
+// document.querySelector(".clear-tasks").addEventListener("click", function(e) {
+//   console.log("Hello World");
+//     e.preventDefault();
+// });
+
+//Name Function
+document.querySelector(".clear-tasks").addEventListener("click", onclick);
+function onclick(e) {
+  e.preventDefault();
+  //   console.log("Clicked!");
+
+  let val;
+  val = e;
+
+  //Even Target Element
+  val = e.target;
+  val = e.target.id;
+  val = e.target.className;
+  val = e.target.classList;
+  //   e.target.innerText = "Hello";
+
+  // Event type
+  val = e.type;
+  val = e.timeStamp;
+
+  //Coordinate of the event relative to the window
+  val = e.clientY; //Vertical
+  val = e.clientX; //Horizontal
+
+  //Coordinate of the event relative to the element
+  //Inside the element
+  val = e.offsetY; //Vertical
+  val = e.offsetX; //Horizontal
+
+  console.log(val);
+}

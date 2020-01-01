@@ -1,0 +1,73 @@
+//String Methods
+//Concatenation
+
+const firstName = "Carlo";
+const lastName = "Rosco";
+const age = 24;
+let val;
+const str = "Hello there my name is Carlo";
+const tags = "web design,web development,programming";
+
+val = firstName + lastName;
+
+//Concatenation
+val = firstName + " " + lastName;
+
+// Append
+val = "Carlo ";
+val += "Rosco";
+
+val = "Hello, My name is " + firstName + " and I am " + age;
+
+// Escaping ('\) using this
+val = "That's awsome, I can't wait!";
+
+//Length Property dont need parentheses
+val = firstName.length;
+
+// concat Method needs parentheses
+// same as append but we use a method. firstName " " lastName.
+val = firstName.concat(" ", lastName);
+
+// Change case
+val = firstName.toUpperCase();
+val = lastName.toLowerCase();
+
+//Getting a character from a string starts with 0 same as Arrays.
+val = firstName[0];
+
+// indexOf()
+// Position of the character from left which is 0 to the very last in the right side.
+val = firstName.indexOf("l");
+// Other way
+val = firstName.lastIndexOf("l");
+
+// charAt()
+// Get the character from the value.
+val = firstName.charAt("2");
+//Get last character
+val = firstName.charAt(firstName.length - 1);
+
+// substring()
+//get the char from 0 - 4 output: Carl
+val = firstName.substring(0, 4);
+
+// slice similar to string
+// but we can use negative number and get characters starting from right.
+val = firstName.slice(0, 4);
+val = firstName.slice(-4);
+
+// split()
+//split a string into an array base on a seperator.
+val = str.split(" ");
+val = tags.split(",");
+
+//replace
+//replace the first value which is "Carlo" using the second value.
+val = str.replace("Carlo", "Rosco");
+
+// includes()
+// Check if something is inside of the string.
+val = str.includes("foo");
+
+console.log(val);

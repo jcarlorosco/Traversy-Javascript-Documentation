@@ -1,0 +1,54 @@
+//FUNCTIONS DECLARATIONS
+
+//Much better way to declare the default value of the function.
+function greet(firstName = "John", lastName = "Doe") {
+  // Old and way to define a default value
+  // if (typeof firstName === "undefined") {
+  //   firstName = "Carlo";
+  // }
+  // if (typeof lastName === "undefined") {
+  //   lastName = "Rosco";
+  // }
+
+  //console.log("Hello");
+  //Console inside the function then just call the function like gree();
+  return "Hello " + firstName + " " + lastName;
+}
+// console.log(greet());
+
+// FUNCTION EXPRESSIONS
+const square = function(x = 3) {
+  return x * x;
+};
+// console.log(square());
+
+//IMMIDIATELY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+// (function() {
+//   console.log("IIFE Ran..");
+// })();
+
+// (function(name) {
+//   console.log("Hello " + name);
+// })("Brad");
+//Declare and instantly run the function
+//Output : Hello Brad
+
+//PROPERTY METHODS
+//When a functions is put inside of an object its called a method
+
+const todo = {
+  add: function() {
+    console.log("Add todo..");
+  },
+  edit: function(id) {
+    console.log(`Edit todo ${id}`);
+  }
+};
+//Define function outside
+todo.delete = function() {
+  console.log("Delete todo...");
+};
+
+todo.add();
+todo.edit(22);
+todo.delete();

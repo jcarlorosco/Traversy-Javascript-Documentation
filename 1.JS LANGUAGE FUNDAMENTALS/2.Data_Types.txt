@@ -1,0 +1,40 @@
+//Primitive Types
+
+//data that being access
+// Strings
+const name = "John Doe";
+//Output: string
+//always start with quout
+
+//Number integer/float
+const age = 42;
+
+//Boolean True or False
+const haskids = true;
+
+//Null
+const car = null;
+//bug in js it will return as object but basically what null means is null itself.
+
+//underfined
+let test;
+//variable that doesnt have a value
+
+//Symbols
+const sym = Symbol();
+
+// REFERENCE TYPES - Objects
+//access from memory as a reference
+
+// ARRAY
+const hobbies = ["movies", "music"];
+
+//Object literal
+const address = {
+  city: "Boston",
+  state: "MA"
+};
+const today = new Date();
+console.log(today);
+
+console.log(typeof today);

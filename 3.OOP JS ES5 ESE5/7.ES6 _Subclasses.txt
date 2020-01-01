@@ -1,0 +1,38 @@
+//ES6 Inheritance
+
+//AKA Subclasses
+
+//Person Class
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  greeting() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+  }
+}
+//Subclass customer
+class Customer extends Person {
+  constructor(firstName, lastName, phone, membership) {
+    //calls the parent class constructor
+    super(firstName, lastName);
+
+    //extra that is not in the first constructor
+    this.phone = phone;
+    this.membership = membership;
+  }
+  static getMembershipCost() {
+    return 500;
+  }
+}
+
+const carlo = new Customer("Carlo", "Rosco", "1123-456", "Standard");
+
+console.log(carlo.greeting());
+
+console.log(Customer.getMembershipCost(0));
+
+//We extends Person class not Customer
+//We cant inherit static method to person class
+//console.log(Person.getMembershipCost(0));

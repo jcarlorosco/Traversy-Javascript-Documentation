@@ -1,0 +1,33 @@
+// Mouse_Events
+
+const clearBtn = document.querySelector(".clear-tasks");
+const card = document.querySelector(".card");
+const heading = document.querySelector("h5");
+
+//Click
+// clearBtn.addEventListener("click", runEvent);
+//Double Click
+// clearBtn.addEventListener("dblclick", runEvent);
+//Mousedown (Click Hold)
+// clearBtn.addEventListener("mousedown", runEvent);
+//Mouseup (click hold let go)
+// clearBtn.addEventListener("mouseup", runEvent);
+
+//Mouseenter
+// card.addEventListener("mouseenter", runEvent);
+// //Mouseleave
+// card.addEventListener("mouseleave", runEvent);
+// //Mouseover ( fires when you go into other element)
+// card.addEventListener("mouseover", runEvent);
+// //Mouseout ( fires when you go into other element)
+// card.addEventListener("mouseout", runEvent);
+//Mousemove (any movement inside the elements)
+card.addEventListener("mousemove", runEvent);
+
+//Event Handler
+function runEvent(e) {
+  console.log(`EVENT TYPE:${e.type}`);
+
+  heading.textContent = `MouseX: ${e.offsetX} MouseY ${e.offsetY}`;
+  document.body.style.backgroundColor = `rgba(${e.offsetX},${e.offsetY},40)`;
+}

@@ -1,0 +1,28 @@
+// Date Times
+let val;
+const today = new Date();
+//Different ways to set an specific date
+//More in google js date object
+//Month is zero base which means Jan is actually 0 and Dec is 11.
+let birthday = new Date("9-10-1981 11:25:00");
+birthday = new Date("September 10 1981");
+birthday = new Date("9/10/1981");
+
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
+
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1996);
+birthday.setHours(23);
+birthday.setMinutes(30);
+birthday.setSeconds(50);
+
+console.log(birthday);

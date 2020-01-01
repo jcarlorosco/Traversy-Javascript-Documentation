@@ -1,0 +1,35 @@
+//ES6 CLASSES
+
+//Create a Class
+class Person {
+  constructor(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = new Date(dob);
+  }
+	//Greeting method
+  greeting() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+  }
+//calculate Age method
+  calculateAge() {
+    const diff = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+//getsmarried method
+  getsMarried(newLastName) {
+    this.lastName = newLastName;
+  }
+  //Static Method
+  static addNumbers(x, y) {
+    return x + y;
+  }
+}
+
+const rosie = new Person("Rosie", "Perez", "03-13-1996");
+
+rosie.getsMarried("Rosco");
+console.log(rosie);
+
+console.log(Person.addNumbers(1, 2));

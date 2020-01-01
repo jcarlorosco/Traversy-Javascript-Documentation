@@ -1,0 +1,50 @@
+//var, let, const
+
+// var
+var name = "John Doe";
+console.log(name);
+name = "steve";
+console.log(name);
+
+// Init var
+var greeting;
+console.log(greeting);
+greeting = "Hello";
+console.log(greeting);
+
+// letter, numbers, _, $
+// cannot start with a number
+var _name = "John";
+var $name = "John";
+
+// Multi word vars
+var firstName = "John"; //Carmel case
+var first_name = "Sara"; //Underscore
+var FirstName = "Tom"; // Pascal
+
+// let
+let name;
+name = "John Doe";
+console.log(name);
+name = "John Carlo";
+console.log(name);
+
+// Const
+// can not reassign
+// Have to assign a value first
+const name = "John";
+console.log(name);
+
+const person = {
+  name: "John",
+  age: 30
+};
+person.name = "Sarah";
+person.age = 32;
+
+// console.log(person);
+// It can mutate when youre using Array or Object
+// You Cant reassign na variable
+const numbers = [1, 2, 3, 4, 5];
+numbers.push(6);
+console.log(numbers);
